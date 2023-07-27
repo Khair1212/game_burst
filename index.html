@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 
 <head>
     <meta charset="UTF-8">
@@ -17,19 +17,21 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        'primary-background': '#F85559',
+
                     }
                 }
             }
         }
     </script>
-
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/59d3502ce1.js" crossorigin="anonymous"></script>
     <!-- Fonts styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        .font-lato{
+        .font-lato {
             font-family: 'Lato', sans-serif;
         }
     </style>
@@ -37,8 +39,58 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class="max-w-full m-auto px-5 py:10 md:px-48 py-10  font-lato">
+        <div
+            class="navbar bg-base-100 px-5 py-5 md:px-12 flex justify-between md:bg-primary-background md:rounded-full">
+            <div class="text-black lg:text-white flex-1">
+                <ul class="hidden lg:flex flex-1 gap-4 text-sm">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">All Fruits</a></li>
+                </ul>
+            </div>
+
+            <div class="lg:flex-1">
+                <div class="flex justify-between gap-20">
+                    <div class="flex-1">
+                        <div class="flex items-center">
+                            <img class="h-8 md:h-10" src="images/logo.png" alt="Logo">
+                            <a class="btn btn-ghost normal-case text-2xl lg:text-4xl text-black lg:text-white">Fruit
+                                Burst</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost text-black lg:hidden flex-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm absolute -left-20 dropdown-content mt-2 z-[1] p-2 shadow bg-primary-background rounded-box w-32">
+
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Shop</a></li>
+                            <li><a href="">All Fruits</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="form-control hidden xl:block relative ">
+                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto z-0" />
+                    <button class="absolute top-3 left-44 z-1 text-black">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
     </header>
 
     <main>
